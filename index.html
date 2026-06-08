@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sandeep S</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav>
+    <div class="logo">Sandeep S</div>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <section class="hero">
+    <h1>Hi, I'm Sandeep S</h1>
+    <p>Web Developer · CS Student · Hyderabad</p>
+    <a href="#projects" class="btn">View My Work</a>
+    <a href="#contact" class="btn outline">Contact Me</a>
+  </section>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <div class="about">
+      <img src="images/profile.jpg" alt="Sandeep S">
+      <div>
+        <p>I'm a 4nd year B.Tech Computer Science student. I started learning HTML and CSS last year and have been building small projects ever since.</p>
+        <p>I'm currently doing the CodSoft Web Development Internship to improve my skills and build real projects.</p>
+        <p>I enjoy badminton, tech YouTube, and late night coding sessions.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills" class="gray">
+    <h2>Skills</h2>
+    <div class="skills">
+      <div class="skill-card">HTML5</div>
+      <div class="skill-card">CSS3</div>
+      <div class="skill-card">JavaScript</div>
+      <div class="skill-card">Python</div>
+      <div class="skill-card">Git & GitHub</div>
+      <div class="skill-card">Responsive Design</div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="projects">
+
+      <div class="project-card">
+        <img src="images/project1.jpg" alt="Calculator">
+        <h3>Basic Calculator</h3>
+        <p>A simple calculator with add, subtract, multiply and divide. Built with HTML, CSS and JavaScript.</p>
+        <a href="#">Live Demo</a> &nbsp; <a href="#">GitHub</a>
+      </div>
+
+      <div class="project-card">
+        <img src="images/project2.jpg" alt="Landing Page">
+        <h3>Coffee Shop Landing Page</h3>
+        <p>A responsive landing page for a coffee shop. Built with only HTML and CSS.</p>
+        <a href="#">Live Demo</a> &nbsp; <a href="#">GitHub</a>
+      </div>
+
+      <div class="project-card">
+        <img src="images/project3.jpg" alt="Portfolio">
+        <h3>Portfolio Website</h3>
+        <p>This portfolio site, built during the CodSoft internship using HTML, CSS and a little JavaScript.</p>
+        <a href="#">Live Demo</a> &nbsp; <a href="#">GitHub</a>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="resume" class="gray">
+    <h2>Resume</h2>
+    <p>Download my resume to see my education, skills and projects.</p>
+    <a href="resume.pdf" download class="btn" style="margin-top: 16px; display: inline-block;">Download Resume</a>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <div class="contact">
+      <div>
+        <p>Email: <a href="mailto:alex@email.com">alex@email.com</a></p>
+        <p>Phone: +91 98765 43210</p>
+        <p>GitHub: <a href="#">github.com</a></p>
+        <p>LinkedIn: <a href="#">linkedin.com</a></p>
+      </div>
+      <div class="form">
+        <input type="text" placeholder="Your Name" id="name">
+        <input type="email" placeholder="Your Email" id="email">
+        <textarea rows="5" placeholder="Your Message" id="msg"></textarea>
+        <button class="btn" onclick="sent()">Send Message</button>
+        <p id="note"></p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2024 Alex Johnson — Made during CodSoft Internship</p>
+  </footer>
+
+  <script>
+    function sent() {
+      var n = document.getElementById('name').value;
+      var e = document.getElementById('email').value;
+      var m = document.getElementById('msg').value;
+      if (!n || !e || !m) {
+        document.getElementById('note').textContent = 'Please fill all fields.';
+        return;
+      }
+      document.getElementById('note').textContent = 'Message sent! I will get back to you.';
+      document.getElementById('name').value = '';
+      document.getElementById('email').value = '';
+      document.getElementById('msg').value = '';
+    }
+  </script>
+
+</body>
+</html>
