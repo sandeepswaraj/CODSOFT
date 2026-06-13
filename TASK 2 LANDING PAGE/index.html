@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Shop</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-logo">Coffee Shop</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#features">Menu</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+    </nav>
+
+    <section class="hero" id="home">
+        <div class="hero-text">
+            <h1>Fresh Coffee,<br>Every Morning.</h1>
+            <p>Handcrafted brews made with love. From espresso to cold brew, your perfect cup awaits you every day.</p>
+            <a href="#contact" class="btn">Order Now</a>
+        </div>
+        <div class="hero-image">
+            <div class="coffee-circle">&#9749;</div>
+        </div>
+    </section>
+
+    <section class="features" id="features">
+        <h2>Why Choose Us?</h2>
+        <p class="section-sub">Simple reasons to love Brew &amp; Co</p>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">&#127807;</div>
+                <h3>Fresh Beans</h3>
+                <p>We source our coffee beans from local farms every single week to make sure you get the freshest cup possible.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">&#128104;&#8205;&#127859;</div>
+                <h3>Expert Baristas</h3>
+                <p>Our baristas are trained professionals who care about making your drink exactly how you like it.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">&#9889;</div>
+                <h3>Fast Service</h3>
+                <p>We value your time. Your order will be ready in minutes so you can get on with your day.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <div class="about-image">
+            <div class="about-box">&#9749;</div>
+        </div>
+        <div class="about-text">
+            <h2>About Our Coffee Shop</h2>
+            <p>We started in 2018 with one simple goal: make great coffee accessible to everyone. Our shop started as a small kiosk and grew into a cozy space where people come to relax, work, and connect.</p>
+            <p>Every cup we serve is made with care, using quality ingredients and a whole lot of passion for coffee.</p>
+            <a href="#contact" class="btn">Visit Us</a>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <h2>Get In Touch</h2>
+        <p class="section-sub">We would love to hear from you</p>
+        <form class="contact-form" onsubmit="handleSubmit(event)">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <input type="text" placeholder="Subject">
+            <textarea placeholder="Your Message" rows="5" required></textarea>
+            <button type="submit" class="btn">Send Message</button>
+        </form>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2024 Coffee Shop. All rights reserved.</p>
+        <p>Made with &#9749; by a coffee lover</p>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            var links = document.querySelector('.nav-links');
+            if (links.style.display === 'flex') {
+                links.style.display = 'none';
+            } else {
+                links.style.display = 'flex';
+                links.style.flexDirection = 'column';
+            }
+        }
+
+        function handleSubmit(event) {
+            event.preventDefault();
+            alert('Thank you for your message! We will get back to you soon.');
+            event.target.reset();
+        }
+    </script>
+
+</body>
+</html>
